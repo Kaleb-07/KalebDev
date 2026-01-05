@@ -1,12 +1,146 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import logoImg from "../../assets/logo.png";
 
-function Header() {
+export default function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+    const [activeLink, setActiveLink] = useState("home");
+
+    // Global dark mode
+    useEffect(() => {
+        if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+        localStorage.setItem("theme", theme);
+    }, [theme]);
+    // useEffect(() => {
+    //     const root = document.documentElement; // <html>
+    //     if (theme === "dark") root.classList.add("dark");
+    //     else root.classList.remove("dark");
+
+    //     localStorage.setItem("theme", theme);
+    // }, [theme]);
+    // <div className="bg-white dark:bg-slate-900 text-gray-800 dark:text-gray-200">
+    //     ...
+    // </div>
+
+    const links = [
+        { name: "Home", id: "home" },
+        { name: "About", id: "about" },
+        { name: "Projects", id: "projects" },
+        { name: "Skills", id: "skills" },
+        { name: "Testimonials", id: "testimonials" },
+        { name: "Contact", id: "contact" },
+    ];
+
     return (
-        <header>
-            <div>
-                <h1>Header</h1>
+        <header className="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow">
+            <div className="max-w-6xl mx-auto px-6 py-4 flex items-center">
+
+                {/* Logo */}
+                <div className="flex items-center gap-2">
+                    <img src={logoImg} alt="Logo" className="w-9 h-9" />
+                    <span className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                        Kaleb<span className="text-purple-400">.</span>
+                    </span>
+                </div>
+
+                {/* Desktop Nav + Theme Toggle */}
+                <div className="ml-auto flex items-center gap-8">
+                    {/* Desktop Nav */}
+                    <nav className="hidden md:flex items-center gap-10">
+                        {links.map((link) => (
+                            <a
+                                key={link.id}
+                                href={`#${link.id}`}
+                                onClick={(e) => {
+                                    e.preventDefault();           // prevent default anchor jump
+                                    setActiveLink(link.id);       // set active link
+
+                                    // Smooth scroll to section
+                                    const section = document.getElementById(link.id);
+                                    if (section) {
+                                        section.scrollIntoView({ behavior: "smooth", block: "start" });
+                                    }
+                                }}
+                                className={`relative font-medium transition-colors
+                            ${activeLink === link.id
+                                        ? "text-purple-600 dark:text-purple-400"
+                                        : "text-gray-800 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+                                    }
+                            after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-purple-600
+                            after:transition-all after:duration-300
+                            ${activeLink === link.id
+                                        ? "after:w-full"
+                                        : "after:w-0 hover:after:w-full"
+                                    }
+                            `}
+                            >
+                                {link.name}
+                            </a>
+                        ))}
+                    </nav>
+
+                    {/* Theme Toggle */}
+                    <button
+                        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                        className="text-xl text-gray-700 dark:text-gray-300"
+                    >
+                        {theme === "dark" ? "🌞" : "🌙"}
+                    </button>
+
+                    {/* Hamburger */}
+                    <button
+                        className="md:hidden p-1"
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {menuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </div>
             </div>
+
+            {/* Mobile Menu */}
+            {menuOpen && (
+                <div className="md:hidden bg-white dark:bg-slate-900 border-t dark:border-slate-700">
+                    <nav className="flex flex-col items-center gap-8 py-8">
+                        {links.map((link) => (
+                            <a
+                                key={link.id}
+                                href={`#${link.id}`}
+                                onClick={(e) => {
+                                    e.preventDefault();           // prevent default anchor jump
+                                    setActiveLink(link.id);       // set active link
+                                    setMenuOpen(false);           // close mobile menu
+
+                                    // Smooth scroll to section
+                                    const section = document.getElementById(link.id);
+                                    if (section) {
+                                        section.scrollIntoView({ behavior: "smooth", block: "start" });
+                                    }
+                                }}
+                                className={`relative text-lg font-medium transition-colors text-center
+                        ${activeLink === link.id
+                                        ? "text-purple-600 dark:text-purple-400"
+                                        : "text-gray-800 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
+                                    }
+                        after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-purple-600
+                        after:transition-all after:duration-300
+                        ${activeLink === link.id
+                                        ? "after:w-full"
+                                        : "after:w-0 hover:after:w-full"
+                                    }
+                    `}
+                            >
+                                {link.name}
+                            </a>
+                        ))}
+                    </nav>
+                </div>
+            )}
         </header>
     );
 }
-export default Header;
