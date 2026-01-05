@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Components
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
 
 // Pages
 import Landing from "./pages/Landing/Landing";
@@ -15,8 +14,6 @@ function App() {
     <BrowserRouter>
       {/* Header always visible */}
       <Header />
-      {/* Hero Section */}
-      <Hero />
 
       {/* Routes */}
       <Routes>
