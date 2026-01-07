@@ -1,5 +1,6 @@
 import React from "react";
 
+// About functions
 function About() {
     return (
         <section id="about">
