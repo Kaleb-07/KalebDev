@@ -6,7 +6,7 @@ const roles = [
     "Graphic Designer",
     "Video Editor",
 ];
-
+// hero logic
 export default function Hero() {
     const [text, setText] = useState("");
     const [roleIndex, setRoleIndex] = useState(0);
