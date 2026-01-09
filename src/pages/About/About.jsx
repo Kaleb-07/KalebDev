@@ -1,6 +1,6 @@
 import profileImg from "../../assets/MyProject/profile.png";
 
-export default function About() {
+function About() {
     return (
         <section
             id="about"

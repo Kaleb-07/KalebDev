@@ -8,6 +8,7 @@ import Projects from "../Projects/Projects";
 import Testimonials from "../Testimonials/Testimonials";
 import Contact from "../Contact/Contact";
 
+// Landing Function
 function Landing() {
     return (
         <main className="bg-background-color text-text-color font-sans">
