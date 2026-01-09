@@ -5,6 +5,7 @@ import TaskManagmentImg from "../../assets/MyProject/TaskManagment.png";
 import CommercialAdvertisementImg from "../../assets/MyProject/CommercialAdvertisement.png";
 import EventHighlightImg from "../../assets/MyProject/EventHighlight.png";
 import BrandIdentityImg from "../../assets/MyProject/BrandIdentity.png";
+
 // Corrected Project Data
 const projectsData = [
     {
@@ -67,11 +68,11 @@ const Projects = () => {
             : projectsData.filter((project) => project.category === filter);
 
     return (
-        <section id="projects" className="py-16 bg-gray-900">
+        <section id="projects" className="py-16 bg-white dark:bg-gray-900">
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-2 text-white">
+                    <h2 className="text-4xl font-bold mb-2 text-gray-900 dark:text-white">
                         My <span className="text-teal-400">Projects</span>
                     </h2>
                     <div className="flex justify-center gap-1 mt-2">
@@ -88,7 +89,7 @@ const Projects = () => {
                             key={cat}
                             className={`px-4 py-2 rounded-full text-sm font-medium transition ${filter === cat
                                 ? "bg-teal-400 text-white"
-                                : "bg-gray-800 text-gray-300 hover:bg-teal-500 hover:text-white"
+                                : "bg-gray-200 text-gray-700 hover:bg-teal-500 hover:text-white dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-teal-500 dark:hover:text-white"
                                 }`}
                             onClick={() => setFilter(cat)}
                         >
@@ -101,10 +102,7 @@ const Projects = () => {
                 <div className="flex justify-center">
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
                         {filteredProjects.map((project) => (
-                            <div
-                                key={project.id}
-                                className="relative group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition"
-                            >
+                            <div className="relative group rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:-translate-y-2">
                                 <img
                                     src={project.img}
                                     alt={project.title}
@@ -112,7 +110,7 @@ const Projects = () => {
                                 />
 
                                 {/* Overlay */}
-                                <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center text-center text-white p-4">
+                                <div className="absolute inset-0 bg-white/70 dark:bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center text-gray-900 dark:text-white p-4">
                                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                                     <p className="text-sm mb-4">{project.description}</p>
                                     <div className="flex gap-4 text-lg">
