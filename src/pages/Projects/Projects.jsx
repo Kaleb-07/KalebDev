@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { FaLink, FaGithub, FaPlay, FaEye } from "react-icons/fa";
+import "./Projects.css";
+
 import EcommerceImg from "../../assets/MyProject/E-commerce.png";
 import TaskManagmentImg from "../../assets/MyProject/TaskManagment.png";
 import CommercialAdvertisementImg from "../../assets/MyProject/CommercialAdvertisement.png";
 import EventHighlightImg from "../../assets/MyProject/EventHighlight.png";
 import BrandIdentityImg from "../../assets/MyProject/BrandIdentity.png";
 
-// Corrected Project Data
 const projectsData = [
     {
         id: 1,
         category: "software",
         title: "E-commerce Website",
-        description:
-            "Full-stack web application with user authentication and payment integration",
+        description: "Full-stack web application with user authentication and payment integration",
         img: EcommerceImg,
         links: { demo: "#", github: "#" },
     },
@@ -54,7 +54,7 @@ const projectsData = [
         category: "design",
         title: "UI/UX Design",
         description: "User interface design for a mobile banking application",
-        img: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&h=300&fit=crop",
+        img: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
         links: { demo: "#" },
     },
 ];
@@ -65,32 +65,30 @@ const Projects = () => {
     const filteredProjects =
         filter === "all"
             ? projectsData
-            : projectsData.filter((project) => project.category === filter);
+            : projectsData.filter((p) => p.category === filter);
 
     return (
-        <section id="projects" className="py-16 bg-white dark:bg-gray-900">
-            <div className="container mx-auto px-4">
-                {/* Section Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-2 text-gray-900 dark:text-white">
+        <section id="projects" className="projects-section bg-white dark:bg-gray-900">
+            <div className="projects-container">
+
+                {/* Header */}
+                <div className="projects-header text-gray-900 dark:text-white">
+                    <h2>
                         My <span className="text-teal-400">Projects</span>
                     </h2>
-                    <div className="flex justify-center gap-1 mt-2">
-                        <span className="block w-8 h-1 bg-pink-400 rounded"></span>
-                        <span className="block w-12 h-1 bg-teal-400 rounded"></span>
-                        <span className="block w-8 h-1 bg-pink-400 rounded"></span>
+                    <div className="title-underline">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
 
                 {/* Filters */}
-                <div className="flex justify-center gap-4 mb-12 flex-wrap">
+                <div className="project-filters">
                     {["all", "software", "video", "design"].map((cat) => (
                         <button
                             key={cat}
-                            className={`px-4 py-2 rounded-full text-sm font-medium transition ${filter === cat
-                                ? "bg-teal-400 text-white"
-                                : "bg-gray-200 text-gray-700 hover:bg-teal-500 hover:text-white dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-teal-500 dark:hover:text-white"
-                                }`}
+                            className={`filter-btn ${filter === cat ? "active bg-teal-500 text-white dark:bg-teal-400" : ""} dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-teal-500`}
                             onClick={() => setFilter(cat)}
                         >
                             {cat.charAt(0).toUpperCase() + cat.slice(1)}
@@ -98,64 +96,40 @@ const Projects = () => {
                     ))}
                 </div>
 
-                {/* Projects Grid - centered */}
-                <div className="flex justify-center">
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
-                        {filteredProjects.map((project) => (
-                            <div className="relative group rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:-translate-y-2">
-                                <img
-                                    src={project.img}
-                                    alt={project.title}
-                                    className="w-full h-64 object-cover"
-                                />
+                {/* Projects Grid */}
+                <div className="projects-grid">
+                    {filteredProjects.map((project) => (
+                        <div className="project-item" key={project.id}>
+                            <div className="project-img">
+                                <img src={project.img} alt={project.title} />
+                            </div>
 
-                                {/* Overlay */}
-                                <div className="absolute inset-0 bg-white/70 dark:bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center text-gray-900 dark:text-white p-4">
-                                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                                    <p className="text-sm mb-4">{project.description}</p>
-                                    <div className="flex gap-4 text-lg">
-                                        {project.links.demo &&
-                                            (project.category === "video" ? (
-                                                <a
-                                                    href={project.links.demo}
-                                                    target="_blank"
-                                                    className="hover:text-teal-400"
-                                                >
-                                                    <FaPlay />
-                                                </a>
+                            <div className="project-overlay">
+                                <div className="project-info text-gray-900 dark:text-white">
+                                    <h3>{project.title}</h3>
+                                    <p>{project.description}</p>
+
+                                    <div className="project-links">
+                                        {project.links.demo && (
+                                            project.category === "video" ? (
+                                                <a href={project.links.demo}><FaPlay /></a>
                                             ) : project.category === "design" ? (
-                                                <a
-                                                    href={project.links.demo}
-                                                    target="_blank"
-                                                    className="hover:text-teal-400"
-                                                >
-                                                    <FaEye />
-                                                </a>
+                                                <a href={project.links.demo}><FaEye /></a>
                                             ) : (
-                                                <a
-                                                    href={project.links.demo}
-                                                    target="_blank"
-                                                    className="hover:text-teal-400"
-                                                >
-                                                    <FaLink />
-                                                </a>
-                                            ))}
+                                                <a href={project.links.demo}><FaLink /></a>
+                                            )
+                                        )}
 
                                         {project.links.github && (
-                                            <a
-                                                href={project.links.github}
-                                                target="_blank"
-                                                className="hover:text-teal-400"
-                                            >
-                                                <FaGithub />
-                                            </a>
+                                            <a href={project.links.github}><FaGithub /></a>
                                         )}
                                     </div>
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
+
             </div>
         </section>
     );

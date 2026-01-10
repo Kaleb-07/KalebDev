@@ -1,0 +1,242 @@
+/* ===== PROJECTS SECTION ===== */
+.projects-section {
+    padding: 80px 0;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.projects-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects-header h2 {
+    font-size: 2.5rem;
+}
+
+.projects-header span {
+    color: var(--primary-color);
+}
+
+.title-underline {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.title-underline span {
+    height: 4px;
+    border-radius: 5px;
+}
+
+.title-underline span:nth-child(1),
+.title-underline span:nth-child(3) {
+    width: 30px;
+    background: var(--secondary-color);
+}
+
+.title-underline span:nth-child(2) {
+    width: 50px;
+    background: var(--primary-color);
+}
+
+/* Filters */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: var(--background-alt-color);
+    transition: var(--transition);
+}
+
+.dark-mode .filter-btn {
+    background: var(--dark-background-alt-color);
+    color: var(--dark-text-color);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 366.66px);
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 366.66px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: repeat(1, 366.66px);
+    }
+}
+
+/* Project Card */
+.project-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.dark-mode .project-item {
+    box-shadow: 0 5px 15px var(--dark-shadow-color);
+}
+
+/* ONLY smooth lift */
+.project-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+/* Image */
+.project-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.project-item:hover .project-img img {
+    transform: scale(1.1);
+}
+
+/* Overlay (EXACT STYLE YOU ASKED) */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.4) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-info {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.project-item:hover .project-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.project-info h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--primary-color);
+    margin: 8px auto;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Links */
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover .project-links a {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-links a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* ===== DARK MODE FIX ===== */
+.dark-mode .projects-section {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+
+.dark-mode .projects-header h2 {
+    color: var(--dark-text-color);
+}
+
+.dark-mode .project-item {
+    background-color: var(--dark-background-alt-color);
+    box-shadow: 0 5px 15px var(--dark-shadow-color);
+}
+
+.dark-mode .project-item:hover {
+    box-shadow: 0 15px 30px var(--dark-shadow-color);
+}
+
+.dark-mode .filter-btn {
+    background-color: var(--dark-background-alt-color);
+    color: var(--dark-text-color);
+}
+
+.dark-mode .filter-btn.active,
+.dark-mode .filter-btn:hover {
+    background-color: var(--dark-primary-color);
+    color: #fff;
+}
