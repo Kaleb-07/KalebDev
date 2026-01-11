@@ -1,0 +1,20 @@
+# Personal Portfolio Website 🚀
+
+A modern, responsive personal portfolio built with **React** and **Tailwind CSS** to showcase my projects, skills, and experience.  
+It includes a fully functional **contact form powered by EmailJS** and supports **dark & light mode**.
+
+---
+
+
+## 📌 Features
+
+- ⚛️ Built with React (Vite)
+- 🎨 Tailwind CSS & custom CSS
+- 🌙 Dark / Light mode support
+- 📱 Fully responsive design
+- 🗂️ Filterable projects section
+- 🖼️ Project hover overlay animations
+- ✉️ Contact form with EmailJS integration
+- 🔐 Environment variable configuration
+- 🚀 Ready for deployment (Netlify / Vercel)
+
