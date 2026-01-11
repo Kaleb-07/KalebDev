@@ -18,3 +18,15 @@ It includes a fully functional **contact form powered by EmailJS** and supports 
 - 🔐 Environment variable configuration
 - 🚀 Ready for deployment (Netlify / Vercel)
 
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Tailwind CSS
+- **Styling:** CSS, Tailwind utilities
+- **Icons:** React Icons, Lucide Icons
+- **Email Service:** EmailJS
+- **Build Tool:** Vite
+- **Deployment:** Netlify / Vercel
+
+---
