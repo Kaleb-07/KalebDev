@@ -40,3 +40,24 @@ It includes a fully functional **contact form powered by EmailJS** and supports 
 ✔ Internship-ready  
 
 ---
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── Header/
+│   ├── Footer/
+│   ├── ProjectCard/
+│   └── TestimonialCard/
+├── pages/
+│   ├── Landing/
+│   └── ProjectDetail/
+├── assets/
+│   ├── images/
+│   └── icons/
+├── App.jsx
+├── index.css
+├── index.js
+├── vite-env.d.ts
+└── README.md
+``` 
