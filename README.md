@@ -52,6 +52,12 @@ src/
 ├── pages/
 │   ├── Landing/
 │   └── ProjectDetail/
+│   └── Contact/
+│   └── About/
+|   └── Hero/
+|   └── Skills/
+|   └── Testimonials/
+|   └── Projects/
 ├── assets/
 │   ├── images/
 │   └── icons/
