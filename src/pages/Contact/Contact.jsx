@@ -162,7 +162,7 @@ export default function Contact() {
                             <input
                                 type="email"
                                 name="email"
-                                placeholder="your.email@example.com"
+                                placeholder="Mesafint007@gmail.com"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
