@@ -30,7 +30,7 @@ function About() {
                         <div className="w-72 h-96 md:w-80 md:h-[500px] rounded-xl overflow-hidden shadow-lg">
                             <img
                                 src={profileImg}
-                                alt="Kaleb working"
+                                alt="Kaleb"
                                 className="w-full h-full object-cover object-top"
                             />
                         </div>
