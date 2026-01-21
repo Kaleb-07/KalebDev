@@ -27,7 +27,7 @@ It includes a fully functional **contact form powered by EmailJS** and supports 
 - **Icons:** React Icons, Lucide Icons
 - **Email Service:** EmailJS
 - **Build Tool:** Vite
-<!-- - **Deployment:** Netlify / Vercel -->
+- **Deployment:** Netlify / Vercel
 
 ---
 
