@@ -84,7 +84,7 @@ export default function Contact() {
                         <div className="space-y-6">
                             {/* Email */}
                             <a
-                                href="mailto:your.email@example.com"
+                                href="mailto:Mesafint007@gmail.com"
                                 className="flex items-center gap-4 p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-blue-600 transition"
                             >
                                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-600 rounded-lg flex items-center justify-center">
@@ -95,7 +95,7 @@ export default function Contact() {
                                         Email
                                     </p>
                                     <p className="text-gray-900 dark:text-white font-medium">
-                                        your.email@example.com
+                                       mesafint007@gmail.com
                                     </p>
                                 </div>
                             </a>
@@ -152,7 +152,7 @@ export default function Contact() {
                             <input
                                 type="text"
                                 name="name"
-                                placeholder="Your name"
+                                placeholder="Your Name"
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
@@ -162,7 +162,7 @@ export default function Contact() {
                             <input
                                 type="email"
                                 name="email"
-                                placeholder="your.email@example.com"
+                                placeholder="Mesafint007@gmail.com"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
