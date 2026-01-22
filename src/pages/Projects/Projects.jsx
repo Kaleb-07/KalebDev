@@ -12,7 +12,7 @@ const projectsData = [
     {
         id: 1,
         category: "software",
-        title: "E-commerce Website",
+        title: "Amazon-Cloning",
         description: "Full-stack web application with user authentication and payment integration",
         img: EcommerceImg,
         links: { demo: "#", github: "#" },
