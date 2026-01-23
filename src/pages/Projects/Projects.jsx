@@ -20,7 +20,7 @@ const projectsData = [
     {
         id: 2,
         category: "software",
-        title: "Task Management App",
+        title: "Netflix-Cloning",
         description: "Mobile-first web application for organizing tasks and projects",
         img: TaskManagmentImg,
         links: { demo: "#", github: "#" },
