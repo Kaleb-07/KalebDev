@@ -12,7 +12,7 @@ const projectsData = [
     {
         id: 1,
         category: "software",
-        title: "E-commerce Website",
+        title: "Amazon-Cloning",
         description: "Full-stack web application with user authentication and payment integration",
         img: EcommerceImg,
         links: { demo: "#", github: "#" },
@@ -21,7 +21,7 @@ const projectsData = [
         id: 2,
         category: "software",
         title: "Task Management App",
-        description: "Mobile-first web application for Entertainment  and watch movies",
+        description: "Mobile-first web application for organizing tasks and projects",
         img: TaskManagmentImg,
         links: { demo: "#", github: "#" },
     },
