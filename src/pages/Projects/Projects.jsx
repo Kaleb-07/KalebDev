@@ -21,7 +21,7 @@ const projectsData = [
         id: 2,
         category: "software",
         title: "Task Management App",
-        description: "Mobile-first web application for organizing tasks and projects",
+        description: "Mobile-first web application for Entertainment and watch movies",
         img: TaskManagmentImg,
         links: { demo: "#", github: "#" },
     },
