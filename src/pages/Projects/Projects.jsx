@@ -27,7 +27,7 @@ const projectsData = [
     },
     {
         id: 3,
-        category: "video",
+        category: "software",
         title: "Commercial Advertisement",
         description: "30-second promotional video for a tech startup",
         img: CommercialAdvertisementImg,
