@@ -7,7 +7,7 @@ function About() {
             className="min-h-screen flex items-center bg-[#f9f9f9] dark:bg-[#1e1e1e] transition-colors py-16"
         >
             <div className="max-w-6xl mx-auto px-6 w-full">
-                {/* Section Header */}
+                {/* Section_Header */}
                 <div className="text-center mb-12">
                     {/* Gradient Title */}
                     <h2 className="text-4xl font-bold mb-2 bg-clip-text text-transparent 
