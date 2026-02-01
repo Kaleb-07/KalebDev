@@ -23,7 +23,7 @@ function About() {
                     </div>
                 </div>
 
-                {/* About Content */}
+                {/* About_Content */}
                 <div className="flex flex-col md:flex-row items-center gap-12">
                     {/* Image */}
                     <div className="flex-1 flex justify-center">
