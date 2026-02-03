@@ -10,7 +10,7 @@ export default function Skills() {
         },
         {
             category: "Tools & DevOps",
-            skills: ["Git", "Docker", "AWS", "CI/CD", "Vercel"],
+            skills: ["Git", "AWS", "CI/CD", "Vercel"],
         },
     ];
 
