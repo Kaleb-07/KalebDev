@@ -27,9 +27,9 @@ const projectsData = [
     },
     {
         id: 3,
-        category: "video",
-        title: "Commercial Advertisement",
-        description: "30-second promotional video for a tech startup",
+        category: "software",
+        title: BookPad",
+        description: "To buy the book with including reading place which is called degital library ",
         img: CommercialAdvertisementImg,
         links: { demo: "#" },
     },
