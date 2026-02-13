@@ -17,8 +17,10 @@ import {
     SiVercel,
     SiGithubactions,
     SiFigma,
-    SiNetlify
+    SiNetlify,
+    SiMysql
 } from "react-icons/si";
+import "../Projects/Projects.css";
 
 export default function Skills() {
     const skillCategories = [
@@ -40,6 +42,7 @@ export default function Skills() {
                 { name: "Express", icon: <SiExpress className="text-gray-600 dark:text-gray-400" /> },
                 { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
                 { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
+                { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
                 { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
             ],
         },
@@ -62,9 +65,16 @@ export default function Skills() {
             id="skills"
             className="px-6 py-10 bg-gray-50 dark:bg-slate-900 transition-colors"
         >
-            <h2 className="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">
-                Skills & Expertise
-            </h2>
+            <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-2 text-gray-900 dark:text-white">
+                    Skills & <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-600 to-teal-500">Expertise</span>
+                </h2>
+                <div className="flex justify-center items-center gap-2 mt-2">
+                    <div className="w-12 h-1 bg-pink-500 dark:bg-pink-400 rounded"></div>
+                    <div className="w-24 h-1 bg-purple-600 dark:bg-purple-400 rounded"></div>
+                    <div className="w-12 h-1 bg-teal-500 dark:bg-teal-400 rounded"></div>
+                </div>
+            </div>
 
             <div className="grid md:grid-cols-3 gap-8">
                 {skillCategories.map((cat) => (
