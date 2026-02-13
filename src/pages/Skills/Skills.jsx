@@ -15,15 +15,18 @@ import {
     SiPostgresql,
     SiFirebase,
     SiVercel,
-    SiGithubactions
+    SiGithubactions,
+    SiFigma,
+    SiNetlify
 } from "react-icons/si";
 
 export default function Skills() {
     const skillCategories = [
         {
-            category: "Frontend",
+            category: "Frontend & Mobile",
             skills: [
                 { name: "React", icon: <FaReact className="text-blue-400" /> },
+                { name: "React Native", icon: <FaReact className="text-blue-400" /> },
                 { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white" /> },
                 { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
                 { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
@@ -31,7 +34,7 @@ export default function Skills() {
             ],
         },
         {
-            category: "Backend",
+            category: "Backend & Database",
             skills: [
                 { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
                 { name: "Express", icon: <SiExpress className="text-gray-600 dark:text-gray-400" /> },
@@ -41,13 +44,15 @@ export default function Skills() {
             ],
         },
         {
-            category: "Tools & DevOps",
+            category: "Tools, DevOps & Design",
             skills: [
                 { name: "Git", icon: <FaGitAlt className="text-orange-600" /> },
                 { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
+                { name: "Figma", icon: <SiFigma className="text-purple-500" /> },
                 { name: "AWS", icon: <FaAws className="text-orange-400" /> },
                 { name: "CI/CD", icon: <SiGithubactions className="text-gray-800 dark:text-white" /> },
                 { name: "Vercel", icon: <SiVercel className="text-black dark:text-white" /> },
+                { name: "Netlify", icon: <SiNetlify className="text-teal-600" /> },
             ],
         },
     ];
