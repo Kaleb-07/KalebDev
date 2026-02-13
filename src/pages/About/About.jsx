@@ -1,4 +1,5 @@
 import profileImg from "../../assets/MyProject/profile.png";
+import cvFile from "../../assets/CV/Software_Developer_CV.pdf";
 
 function About() {
     return (
@@ -57,7 +58,7 @@ function About() {
                         <div className="grid grid-cols-2 gap-4 text-gray-800 dark:text-gray-300 mb-6">
                             <div className="flex gap-2">
                                 <span className="font-semibold text-purple-600 dark:text-purple-400">Name:</span>
-                                <p>Kaleb</p>
+                                <p>Kaleb Mulugeta</p>
                             </div>
                             <div className="flex gap-2">
                                 <span className="font-semibold text-purple-600 dark:text-purple-400">Email:</span>
@@ -72,7 +73,8 @@ function About() {
                         {/* CV Button with top margin */}
                         <div className="mt-6">
                             <a
-                                href="#"
+                                href={cvFile}
+                                download="Software_Developer_CV.pdf"
                                 className="px-8 py-3 rounded-full bg-purple-600 text-white font-semibold
                 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500
                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"

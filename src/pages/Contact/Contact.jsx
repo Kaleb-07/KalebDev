@@ -1,4 +1,5 @@
-import { Mail, Github, Linkedin, Send, AlertCircle } from "lucide-react";
+import { Mail, Github, Linkedin, Send, AlertCircle, FileText } from "lucide-react";
+import cvFile from "../../assets/CV/Software_Developer_CV.pdf";
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
