@@ -12,23 +12,23 @@ const testimonials = [
         role: "CEO, Tech Innovations",
         image: client1,
         message:
-            "Kaleb is an exceptional software engineer. His attention to detail and problem-solving skills are outstanding. He delivered our project ahead of schedule and exceeded our expectations.",
+            "Kaleb is a top-tier Software Engineer. He architected a scalable backend for our platform that improved performance by 40%. His technical depth and problem-solving skills are impressive.",
     },
     {
         id: 1,
         name: "Sarah Johnson",
-        role: "Marketing Director, Creative Studios",
+        role: "Product Manager, Creative Studios",
         image: client2,
         message:
-            "Working with Kaleb on our video editing project was a pleasure. His creative vision and technical skills transformed our raw footage into a compelling story that resonated with our audience.",
+            "We hired Kaleb for a complex mobile app, and he delivered a flawless React Native experience. He bridges the gap between clean code and intuitive UI/UX design perfectly.",
     },
     {
         id: 2,
         name: "Michael Chen",
-        role: "Brand Manager, Global Retail",
+        role: "Founder, StartUp Hub",
         image: client3,
         message:
-            "Kaleb's graphic design work for our brand refresh was exactly what we needed. He captured our vision perfectly and delivered designs that were both beautiful and functional.",
+            "His eye for design is unmatched. Kaleb redesigned our entire dashboard, making it not only visually stunning but also incredibly user-friendly. A true Full Stack Developer who cares about the user.",
     },
 ];
 
@@ -58,28 +58,28 @@ export default function Testimonials() {
 
                 {/* HEADER */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-                        Client <span className="text-gray-500 dark:text-gray-300">Testimonials</span>
+                    <h2 className="text-4xl font-bold mb-2 text-gray-900 dark:text-white">
+                        Client <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-600 to-teal-500">Testimonials</span>
                     </h2>
-
-                    <div className="flex justify-center items-center gap-2">
-                        <span className="w-10 h-1 bg-purple-600 rounded"></span>
-                        <span className="w-20 h-1 bg-gray-300 dark:bg-gray-600 rounded"></span>
-                        <span className="w-10 h-1 bg-purple-600 rounded"></span>
+                    <div className="flex justify-center items-center gap-2 mt-2">
+                        <div className="w-12 h-1 bg-pink-500 dark:bg-pink-400 rounded"></div>
+                        <div className="w-24 h-1 bg-purple-600 dark:bg-purple-400 rounded"></div>
+                        <div className="w-12 h-1 bg-teal-500 dark:bg-teal-400 rounded"></div>
                     </div>
                 </div>
 
                 {/* TESTIMONIAL BOX */}
-                <div className="bg-white dark:bg-[rgb(18,18,18)] rounded-xl shadow-lg p-8 md:p-12 max-w-3xl mx-auto transition-colors">
+                <div className="bg-white dark:bg-[rgb(18,18,18)] rounded-3xl shadow-xl p-8 md:p-12 max-w-3xl mx-auto transition-all duration-500">
 
                     <div className="flex flex-col md:flex-row items-center gap-6">
 
                         {/* IMAGE */}
                         <div className="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-purple-600 shadow-md flex-shrink-0">
                             <img
+                                key={current}
                                 src={testimonials[current].image}
                                 alt={testimonials[current].name}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover animate-fade-in"
                             />
                         </div>
 
@@ -87,19 +87,21 @@ export default function Testimonials() {
                         <div className="flex-1 text-center md:text-left">
                             <FaQuoteLeft className="text-3xl text-purple-600 mb-4 mx-auto md:mx-0" />
 
-                            <p
-                                className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4
-                           min-h-[120px] md:min-h-[96px]"
-                            >
-                                {testimonials[current].message}
-                            </p>
+                            <div key={current} className="animate-fade-in">
+                                <p
+                                    className="text-gray-700 dark:text-gray-200 leading-relaxed mb-4
+                           min-h-[120px] md:min-h-[96px] text-lg italic"
+                                >
+                                    "{testimonials[current].message}"
+                                </p>
 
-                            <h4 className="font-bold text-gray-900 dark:text-white">
-                                {testimonials[current].name}
-                            </h4>
-                            <p className="text-gray-500 dark:text-gray-400">
-                                {testimonials[current].role}
-                            </p>
+                                <h4 className="font-bold text-gray-900 dark:text-white text-xl">
+                                    {testimonials[current].name}
+                                </h4>
+                                <p className="text-gray-500 dark:text-gray-400">
+                                    {testimonials[current].role}
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -109,34 +111,35 @@ export default function Testimonials() {
                         <button
                             onClick={prev}
                             className="p-3 rounded-full border border-purple-600 text-purple-600
-                         hover:bg-purple-600 hover:text-white transition-all"
+                         hover:bg-purple-600 hover:text-white transition-all hover:scale-110"
                         >
                             <FaChevronLeft />
                         </button>
 
+                        {/* DOTS */}
+                        <div className="flex justify-center gap-3">
+                            {testimonials.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setCurrent(index)}
+                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${current === index
+                                        ? "bg-purple-600 w-6"
+                                        : "bg-gray-300 dark:bg-gray-600 hover:bg-purple-400"
+                                        }`}
+                                />
+                            ))}
+                        </div>
+
                         <button
                             onClick={next}
                             className="p-3 rounded-full border border-purple-600 text-purple-600
-                         hover:bg-purple-600 hover:text-white transition-all"
+                         hover:bg-purple-600 hover:text-white transition-all hover:scale-110"
                         >
                             <FaChevronRight />
                         </button>
 
                     </div>
 
-                    {/* DOTS */}
-                    <div className="flex justify-center gap-3 mt-6">
-                        {testimonials.map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setCurrent(index)}
-                                className={`w-3 h-3 rounded-full transition-colors ${current === index
-                                    ? "bg-purple-600"
-                                    : "bg-gray-300 dark:bg-gray-600"
-                                    }`}
-                            />
-                        ))}
-                    </div>
 
                 </div>
             </div>
