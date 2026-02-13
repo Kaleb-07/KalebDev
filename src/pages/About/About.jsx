@@ -39,12 +39,10 @@ function About() {
                     {/* Text */}
                     <div className="flex-1 text-center md:text-left space-y-6">
                         <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200">
-                            Software Engineering Student & Creative Professional
+                            Software Engineer & Full Stack Developer
                         </h3>
                         <p className="text-gray-700 dark:text-gray-300 max-w-xl">
-                            I'm a passionate software engineering student with a strong interest in creating innovative
-                            digital solutions. My journey in technology began with a curiosity about how digital products
-                            are built, which led me to pursue formal education in software engineering.
+                            I am a passionate Software Engineer and Full Stack Developer with a keen eye for UI/UX design. I specialize in building scalable, high-performance web and mobile applications that solve real-world problems. My approach combines technical depth with creative design to deliver seamless digital experiences.
                         </p>
                         <p className="text-gray-700 dark:text-gray-300 max-w-xl">
                             Alongside my technical skills, I've developed expertise in video editing and graphic design. This
