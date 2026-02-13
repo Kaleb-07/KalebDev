@@ -98,15 +98,7 @@ export default function Header() {
                         ))}
                     </nav>
 
-                    {/* Social Icons */}
-                    <div className="hidden lg:flex items-center gap-4 border-l border-gray-200 dark:border-slate-700 pl-8">
-                        <a href="https://github.com/Kaleb-07" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                            <Github size={20} />
-                        </a>
-                        <a href="https://www.linkedin.com/in/kaleb" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                            <Linkedin size={20} />
-                        </a>
-                    </div>
+
 
                     {/* Theme Toggle */}
                     <button
