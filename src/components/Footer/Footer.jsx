@@ -1,17 +1,6 @@
-import { useState, useEffect } from "react";
+import React from "react";
 
 export default function Footer() {
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
-    // Global dark mode
-    useEffect(() => {
-        if (theme === "dark") {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-        localStorage.setItem("theme", theme);
-    }, [theme]);
 
     const navLinks = [
         { name: "Home", href: "#home" },

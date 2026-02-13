@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-import logoImg from "../../assets/logo.png";
+import { Menu, X, Github, Linkedin } from "lucide-react";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -16,6 +15,28 @@ export default function Header() {
         }
         localStorage.setItem("theme", theme);
     }, [theme]);
+
+    // Scroll-based active link highlighting
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = links.map(link => document.getElementById(link.id));
+            const scrollPosition = window.scrollY + 100; // Offset for header height
+
+            sections.forEach((section, index) => {
+                if (section) {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        setActiveLink(links[index].id);
+                    }
+                }
+            });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const links = [
         { name: "Home", id: "home" },
@@ -38,7 +59,7 @@ export default function Header() {
                     </span>
                 </div>
 
-                {/* Desktop Nav + Theme Toggle */}
+                {/* Desktop Nav + Socials + Theme Toggle */}
                 <div className="ml-auto flex items-center gap-8">
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center gap-10">
@@ -73,6 +94,16 @@ export default function Header() {
                             </a>
                         ))}
                     </nav>
+
+                    {/* Social Icons */}
+                    <div className="hidden lg:flex items-center gap-4 border-l border-gray-200 dark:border-slate-700 pl-8">
+                        <a href="https://github.com/Kaleb-07" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                            <Github size={20} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/kaleb" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                            <Linkedin size={20} />
+                        </a>
+                    </div>
 
                     {/* Theme Toggle */}
                     <button
@@ -128,6 +159,16 @@ export default function Header() {
                                 {link.name}
                             </a>
                         ))}
+
+                        {/* Mobile Social Icons */}
+                        <div className="flex items-center gap-6 pt-4 border-t dark:border-slate-700 w-full justify-center">
+                            <a href="https://github.com/Kaleb-07" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                                <Github size={24} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/kaleb" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                                <Linkedin size={24} />
+                            </a>
+                        </div>
                     </nav>
                 </div>
             )}
