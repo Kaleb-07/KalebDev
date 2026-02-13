@@ -3,8 +3,8 @@ import profileImg from "../../assets/MyProject/About-image.jpg";
 
 const roles = [
     "Software Engineer",
-    "Graphic Designer",
-    "Video Editor",
+    "Full Stack Developer",
+    "UI/UX Designer",
 ];
 // hero logic
 export default function Hero() {
@@ -55,7 +55,7 @@ export default function Hero() {
                         </h3>
 
                         <p className="text-gray-600 dark:text-gray-300 max-w-xl mb-8">
-                            Creating digital experiences through code, video, and design.
+                            Building robust software solutions, mobile apps, and intuitive web applications with a focus on performance and scalability.
                         </p>
 
                         {/* BUTTONS */}
