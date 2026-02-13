@@ -32,7 +32,7 @@ export default function Header() {
 
                 {/* Logo */}
                 <div className="flex items-center gap-2">
-                    <img src={logoImg} alt="Logo" className="w-9 h-9" />
+                    <img src="/logo.svg" alt="Logo" className="w-9 h-9" />
                     <span className="text-2xl font-bold text-purple-600 dark:text-purple-400">
                         Kaleb<span className="text-purple-400">.</span>
                     </span>

@@ -52,7 +52,7 @@ export default function Testimonials() {
     return (
         <section
             id="testimonials"
-            className="py-20 bg-gray-50 dark:bg-[rgb(30,30,30)] transition-colors"
+            className="py-10 bg-gray-50 dark:bg-[rgb(30,30,30)] transition-colors"
         >
             <div className="max-w-6xl mx-auto px-6">
 
@@ -131,8 +131,8 @@ export default function Testimonials() {
                                 key={index}
                                 onClick={() => setCurrent(index)}
                                 className={`w-3 h-3 rounded-full transition-colors ${current === index
-                                        ? "bg-purple-600"
-                                        : "bg-gray-300 dark:bg-gray-600"
+                                    ? "bg-purple-600"
+                                    : "bg-gray-300 dark:bg-gray-600"
                                     }`}
                             />
                         ))}

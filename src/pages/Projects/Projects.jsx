@@ -28,7 +28,7 @@ const projectsData = [
     {
         id: 3,
         category: "software",
-        title: BookPad",
+        title: "BookPad",
         description: "To buy the book with including reading place which is called degital library ",
         img: CommercialAdvertisementImg,
         links: { demo: "#" },
