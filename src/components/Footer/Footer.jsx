@@ -19,13 +19,14 @@ export default function Footer() {
     const services = [
         { name: "Web Development", href: "#" },
         { name: "UI/UX Design", href: "#" },
+        { name: "Mobile Development", href: "#" },
         { name: "Graphic Design", href: "#" },
         { name: "Video Editing", href: "#" },
     ];
 
     const contact = [
-        { name: "Email: hello@kaleb.dev", href: "mailto:hello@kaleb.dev" },
-        { name: "Location: San Francisco, CA", href: "#" },
+        { name: "Email: mesafint007@gmail.com", href: "mailto:mesafint007@gmail.com" },
+        { name: "Location: Addis Ababa, ETH", href: "#" },
     ];
 
     return (

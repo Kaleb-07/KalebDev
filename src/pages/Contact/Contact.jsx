@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, Send, AlertCircle, FileText } from "lucide-react";
+import { Mail, Github, Linkedin, Send, AlertCircle, FileText, MapPin } from "lucide-react";
 import cvFile from "../../assets/CV/Software_Developer_CV.pdf";
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
@@ -108,6 +108,21 @@ export default function Contact() {
                                     </p>
                                 </div>
                             </a>
+
+                            {/* Location */}
+                            <div className="flex items-center gap-4 p-4 rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50 transition shadow-sm hover:shadow-md">
+                                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-600 rounded-2xl flex items-center justify-center">
+                                    <MapPin className="text-purple-600 dark:text-white" />
+                                </div>
+                                <div>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                                        Location
+                                    </p>
+                                    <p className="text-gray-900 dark:text-white font-medium">
+                                        Addis Ababa, ETH
+                                    </p>
+                                </div>
+                            </div>
 
                             {/* GitHub */}
                             <a
