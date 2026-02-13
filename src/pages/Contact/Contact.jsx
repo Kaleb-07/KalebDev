@@ -95,7 +95,7 @@ export default function Contact() {
                                         Email
                                     </p>
                                     <p className="text-gray-900 dark:text-white font-medium">
-                                       mesafint007@gmail.com
+                                        mesafint007@gmail.com
                                     </p>
                                 </div>
                             </a>
@@ -162,7 +162,7 @@ export default function Contact() {
                             <input
                                 type="email"
                                 name="email"
-                                placeholder="Mesafint007@gmail.com"
+                                placeholder="your@email.com"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required

@@ -16,16 +16,6 @@ export default function Header() {
         }
         localStorage.setItem("theme", theme);
     }, [theme]);
-    // useEffect(() => {
-    //     const root = document.documentElement; // <html>
-    //     if (theme === "dark") root.classList.add("dark");
-    //     else root.classList.remove("dark");
-
-    //     localStorage.setItem("theme", theme);
-    // }, [theme]);
-    // <div className="bg-white dark:bg-slate-900 text-gray-800 dark:text-gray-200">
-    //     ...
-    // </div>
 
     const links = [
         { name: "Home", id: "home" },

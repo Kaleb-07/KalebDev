@@ -22,12 +22,12 @@ function Landing() {
                 <About />
             </section>
 
-            {/* Skills Section */}
+            {/* Projects Section */}
             <section id="projects">
                 <Projects />
             </section>
 
-            {/* Projects Section */}
+            {/* Skills Section */}
             <section id="skills">
                 <Skills />
             </section>
