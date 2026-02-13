@@ -35,9 +35,15 @@ export default function Footer() {
 
                     {/* Brand */}
                     <div>
-                        <h3 className="text-xl font-bold gradient-text mb-4">Kaleb</h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                            Full Stack Developer passionate about creating exceptional web experiences.
+                        <div className="flex items-center gap-1.5 leading-none mb-6">
+                            <span className="text-purple-500 font-mono text-xl font-bold">&lt;</span>
+                            <span className="text-2xl font-black tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-b from-gray-800 to-gray-400 dark:from-white dark:via-slate-200 dark:to-purple-400 drop-shadow-[0_0_12px_rgba(168,85,247,0.3)] uppercase">
+                                KALEB
+                            </span>
+                            <span className="text-purple-500 font-mono text-xl font-bold">/&gt;</span>
+                        </div>
+                        <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-xs">
+                            Building exceptional web experiences with modern technologies and a creative touch.
                         </p>
                     </div>
 

@@ -51,12 +51,15 @@ export default function Header() {
         <header className="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center">
 
-                {/* Logo */}
-                <div className="flex items-center gap-2">
-                    <img src="/logo.svg" alt="Logo" className="w-9 h-9" />
-                    <span className="text-2xl font-bold text-purple-600 dark:text-purple-400">
-                        Kaleb<span className="text-purple-400">.</span>
+                <div
+                    className="flex items-center gap-1.5 leading-none cursor-pointer group"
+                    onClick={() => window.location.reload()}
+                >
+                    <span className="text-purple-500 font-mono text-xl font-bold animate-pulse">&lt;</span>
+                    <span className="text-2xl font-black tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-b from-white via-slate-200 to-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.55)] transition-all group-hover:drop-shadow-[0_0_20px_rgba(168,85,247,0.7)] uppercase">
+                        KALEB
                     </span>
+                    <span className="text-purple-400 font-mono text-xl font-bold drop-shadow-[0_0_8px_rgba(168,85,247,0.8)] animate-pulse">/&gt;</span>
                 </div>
 
                 {/* Desktop Nav + Socials + Theme Toggle */}
