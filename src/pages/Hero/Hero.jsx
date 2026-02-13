@@ -54,7 +54,7 @@ export default function Hero() {
                             </span>
                         </h3>
 
-                        <p className="text-gray-600 dark:text-gray-300 max-w-xl mb-8">
+                        <p className="text-gray-500 dark:text-gray-400 text-base md:text-lg leading-relaxed max-w-xl mb-8">
                             Building robust software solutions, mobile apps, and intuitive web applications with a focus on performance and scalability.
                         </p>
 
