@@ -45,8 +45,8 @@ const projectsData = [
         id: 7,
         category: "Ongoing",
         title: "Agriculture Ecosystem",
-        description: "A comprehensive platform connecting farmers with markets, resources, and modern farming tools.",
-        img: "https://images.unsplash.com/photo-1625246333195-58f21a0189d7?w=800&q=80",
+        description: "A unified digital platform connecting Ethiopian farmers to markets, advice, rental tools, and buyers.",
+        img: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80",
         links: { demo: "#" },
     },
     {
@@ -54,7 +54,7 @@ const projectsData = [
         category: "Design",
         title: "Brand Identity",
         description: "Complete branding package for a fitness company",
-        img: BrandIdentityImg,
+        img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80",
         links: { demo: "#" },
     },
     {
@@ -62,7 +62,7 @@ const projectsData = [
         category: "Design",
         title: "UI/UX Design",
         description: "User interface design for a mobile banking application",
-        img: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
+        img: "https://images.unsplash.com/photo-1561070791-36c11767b26a?w=800&q=80",
         links: { demo: "#" },
     },
 ];
