@@ -52,17 +52,17 @@ const projectsData = [
     {
         id: 5,
         category: "Design",
-        title: "Brand Identity",
-        description: "Complete branding package for a fitness company",
-        img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80",
+        title: "FitLife Brand Identity",
+        description: "Modern fitness brand identity with logo design, color palette, typography system, and marketing materials.",
+        img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
         links: { demo: "#" },
     },
     {
         id: 6,
         category: "Design",
-        title: "UI/UX Design",
-        description: "User interface design for a mobile banking application",
-        img: "https://images.unsplash.com/photo-1561070791-36c11767b26a?w=800&q=80",
+        title: "SecureBank Mobile App",
+        description: "Mobile banking app UI/UX redesign focusing on accessibility, intuitive navigation, and modern aesthetics.",
+        img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
         links: { demo: "#" },
     },
 ];
