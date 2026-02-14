@@ -55,11 +55,11 @@ export default function Header() {
                     className="flex items-center gap-1.5 leading-none cursor-pointer group"
                     onClick={() => window.location.reload()}
                 >
-                    <span className="text-purple-500 font-mono text-xl font-bold animate-pulse">&lt;</span>
-                    <span className="text-2xl font-black tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-b from-white via-slate-200 to-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.55)] transition-all group-hover:drop-shadow-[0_0_20px_rgba(168,85,247,0.7)] uppercase">
+                    <span className="text-purple-500 dark:text-purple-400 font-mono text-xl font-bold animate-pulse">&lt;</span>
+                    <span className="text-2xl font-black tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-b from-gray-800 via-gray-600 to-purple-600 dark:from-white dark:via-slate-200 dark:to-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.55)] transition-all group-hover:drop-shadow-[0_0_20px_rgba(168,85,247,0.7)] uppercase">
                         KALEB
                     </span>
-                    <span className="text-purple-400 font-mono text-xl font-bold drop-shadow-[0_0_8px_rgba(168,85,247,0.8)] animate-pulse">/&gt;</span>
+                    <span className="text-purple-400 dark:text-purple-300 font-mono text-xl font-bold drop-shadow-[0_0_8px_rgba(168,85,247,0.8)] animate-pulse">/&gt;</span>
                 </div>
 
                 {/* Desktop Nav + Socials + Theme Toggle */}
