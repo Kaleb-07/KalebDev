@@ -37,16 +37,16 @@ const projectsData = [
         id: 4,
         category: "Ongoing",
         title: "BookPad",
-        description: "To buy the book with including reading place which is called degital library",
-        img: EventHighlightImg,
+        description: "A digital library and marketplace for purchasing, reading, and managing books online.",
+        img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
         links: { demo: "#" },
     },
     {
         id: 7,
         category: "Ongoing",
-        title: "Agriclture-Ecosystem",
-        description: "To buy the book with including reading place which is called degital library",
-        img: EventHighlightImg,
+        title: "Agriculture Ecosystem",
+        description: "A comprehensive platform connecting farmers with markets, resources, and modern farming tools.",
+        img: "https://images.unsplash.com/photo-1625246333195-58f21a0189d7?w=800&q=80",
         links: { demo: "#" },
     },
     {
@@ -69,11 +69,20 @@ const projectsData = [
 
 const Projects = () => {
     const [filter, setFilter] = useState("all");
+    const [comingSoonId, setComingSoonId] = useState(null);
 
     const filteredProjects =
         filter === "all"
             ? projectsData
             : projectsData.filter((p) => p.category === filter);
+
+    const handleDemoClick = (e, id, link) => {
+        if (link === "#") {
+            e.preventDefault();
+            setComingSoonId(id);
+            setTimeout(() => setComingSoonId(null), 2000); // Reset after 2 seconds
+        }
+    };
 
     return (
         <section id="projects" className="projects-section bg-white dark:bg-gray-900">
@@ -113,24 +122,44 @@ const Projects = () => {
                             </div>
 
                             <div className="project-overlay">
-                                <div className="project-info text-gray-900 dark:text-white">
-                                    <h3>{project.title}</h3>
-                                    <p>{project.description}</p>
-
-                                    <div className="project-links">
-                                        {project.links.demo && (
-                                            project.category === "Design" ? (
-                                                <a href={project.links.demo} target="_blank" rel="noopener noreferrer"><FaEye /></a>
-                                            ) : (
-                                                <a href={project.links.demo} target="_blank" rel="noopener noreferrer"><FaLink /></a>
-                                            )
-                                        )}
-
-                                        {project.links.github && (
-                                            <a href={project.links.github} target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                                        )}
+                                {comingSoonId === project.id ? (
+                                    <div className="coming-soon-msg text-white font-bold text-xl animate-bounce">
+                                        Coming Soon...
                                     </div>
-                                </div>
+                                ) : (
+                                    <div className="project-info text-gray-900 dark:text-white">
+                                        <h3>{project.title}</h3>
+                                        <p>{project.description}</p>
+
+                                        <div className="project-links">
+                                            {project.links.demo && (
+                                                project.category === "Design" ? (
+                                                    <a
+                                                        href={project.links.demo}
+                                                        target={project.links.demo === "#" ? "_self" : "_blank"}
+                                                        rel="noopener noreferrer"
+                                                        onClick={(e) => handleDemoClick(e, project.id, project.links.demo)}
+                                                    >
+                                                        <FaEye />
+                                                    </a>
+                                                ) : (
+                                                    <a
+                                                        href={project.links.demo}
+                                                        target={project.links.demo === "#" ? "_self" : "_blank"}
+                                                        rel="noopener noreferrer"
+                                                        onClick={(e) => handleDemoClick(e, project.id, project.links.demo)}
+                                                    >
+                                                        <FaLink />
+                                                    </a>
+                                                )
+                                            )}
+
+                                            {project.links.github && (
+                                                <a href={project.links.github} target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                                            )}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}
