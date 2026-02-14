@@ -11,39 +11,47 @@ import BrandIdentityImg from "../../assets/MyProject/BrandIdentity.png";
 const projectsData = [
     {
         id: 1,
-        category: "software",
+        category: "Deployed",
         title: "Amazon-Cloning",
         description: "Full-stack web application with user authentication and payment integration",
         img: EcommerceImg,
-        links: { demo: "#", github: "#" },
+        links: { demo: "https://amazon-cloning-carli.netlify.app/", github: "https://github.com/Kaleb-07/Amazon_clone.git" },
     },
     {
         id: 2,
-        category: "software",
-        title: "Task Management App",
-        description: "Mobile-first web application for Entertainment and watch movies",
+        category: "Deployed",
+        title: "Travel-Landing",
+        description: "Ready for your next adventure? Explore destinations, book trips, and track your journey",
         img: TaskManagmentImg,
         links: { demo: "#", github: "#" },
     },
     {
         id: 3,
-        category: "software",
-        title: "BookPad",
-        description: "To buy the book with including reading place which is called degital library ",
+        category: "Deployed",
+        title: "Netflix-Cloning",
+        description: "Mobile-first web application for Entertainment and watch movies",
         img: CommercialAdvertisementImg,
         links: { demo: "#" },
     },
     {
         id: 4,
-        category: "video",
-        title: "Event Highlight Reel",
-        description: "Compilation of key moments from a tech conference",
+        category: "Ongoing",
+        title: "BookPad",
+        description: "To buy the book with including reading place which is called degital library",
+        img: EventHighlightImg,
+        links: { demo: "#" },
+    },
+    {
+        id: 7,
+        category: "Ongoing",
+        title: "Agriclture-Ecosystem",
+        description: "To buy the book with including reading place which is called degital library",
         img: EventHighlightImg,
         links: { demo: "#" },
     },
     {
         id: 5,
-        category: "design",
+        category: "Design",
         title: "Brand Identity",
         description: "Complete branding package for a fitness company",
         img: BrandIdentityImg,
@@ -51,7 +59,7 @@ const projectsData = [
     },
     {
         id: 6,
-        category: "design",
+        category: "Design",
         title: "UI/UX Design",
         description: "User interface design for a mobile banking application",
         img: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800",
@@ -85,7 +93,7 @@ const Projects = () => {
 
                 {/* Filters */}
                 <div className="project-filters">
-                    {["all", "software", "video", "design"].map((cat) => (
+                    {["all", "Deployed", "Ongoing", "Design"].map((cat) => (
                         <button
                             key={cat}
                             className={`filter-btn ${filter === cat ? "active bg-teal-500 text-white dark:bg-teal-400" : ""} dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-teal-500`}
@@ -111,17 +119,15 @@ const Projects = () => {
 
                                     <div className="project-links">
                                         {project.links.demo && (
-                                            project.category === "video" ? (
-                                                <a href={project.links.demo}><FaPlay /></a>
-                                            ) : project.category === "design" ? (
-                                                <a href={project.links.demo}><FaEye /></a>
+                                            project.category === "Design" ? (
+                                                <a href={project.links.demo} target="_blank" rel="noopener noreferrer"><FaEye /></a>
                                             ) : (
-                                                <a href={project.links.demo}><FaLink /></a>
+                                                <a href={project.links.demo} target="_blank" rel="noopener noreferrer"><FaLink /></a>
                                             )
                                         )}
 
                                         {project.links.github && (
-                                            <a href={project.links.github}><FaGithub /></a>
+                                            <a href={project.links.github} target="_blank" rel="noopener noreferrer"><FaGithub /></a>
                                         )}
                                     </div>
                                 </div>
