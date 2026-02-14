@@ -70,11 +70,15 @@ const projectsData = [
 const Projects = () => {
     const [filter, setFilter] = useState("all");
     const [comingSoonId, setComingSoonId] = useState(null);
+    const [showAll, setShowAll] = useState(false);
 
     const filteredProjects =
         filter === "all"
             ? projectsData
             : projectsData.filter((p) => p.category === filter);
+
+    // Limit to 6 projects initially
+    const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
 
     const handleDemoClick = (e, id, link) => {
         if (link === "#") {
@@ -115,7 +119,7 @@ const Projects = () => {
 
                 {/* Projects Grid */}
                 <div className="projects-grid">
-                    {filteredProjects.map((project) => (
+                    {displayedProjects.map((project) => (
                         <div className="project-item" key={project.id}>
                             <div className="project-img">
                                 <img src={project.img} alt={project.title} />
@@ -164,6 +168,18 @@ const Projects = () => {
                         </div>
                     ))}
                 </div>
+
+                {/* View More Button */}
+                {filteredProjects.length > 6 && (
+                    <div className="view-more-container">
+                        <button
+                            className="view-more-btn"
+                            onClick={() => setShowAll(!showAll)}
+                        >
+                            {showAll ? "Show Less" : "View More"}
+                        </button>
+                    </div>
+                )}
 
             </div>
         </section>
