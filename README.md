@@ -5,7 +5,6 @@ It includes a fully functional **contact form powered by EmailJS** and supports 
 
 ---
 
-
 ## 📌 Features
 
 - ⚛️ Built with React (Vite)
