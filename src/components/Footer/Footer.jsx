@@ -38,7 +38,10 @@ export default function Footer() {
 
                     {/* Brand */}
                     <div>
-                        <div className="flex items-center gap-1.5 leading-none mb-6">
+                        <div
+                            className="flex items-center gap-1.5 leading-none mb-6 cursor-pointer"
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                        >
                             <span className="text-purple-500 font-mono text-xl font-bold">&lt;</span>
                             <span className="text-2xl font-black tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-b from-gray-800 to-gray-400 dark:from-white dark:via-slate-200 dark:to-purple-400 drop-shadow-[0_0_12px_rgba(168,85,247,0.3)] uppercase">
                                 KALEB
