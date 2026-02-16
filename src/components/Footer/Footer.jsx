@@ -1,5 +1,7 @@
 import React from "react";
 
+import cvFile from "../../assets/CV/KalebMulugetaCV.pdf";
+
 export default function Footer() {
 
     const navLinks = [
@@ -10,10 +12,10 @@ export default function Footer() {
     ];
 
     const resources = [
-        { name: "Resume", href: "#" },
-        { name: "GitHub", href: "#" },
-        { name: "LinkedIn", href: "#" },
-        { name: "Twitter", href: "#" },
+        { name: "Resume", href: cvFile },
+        { name: "GitHub", href: "https://github.com/Kaleb-07" },
+        { name: "LinkedIn", href: "https://www.linkedin.com/in/kaleb-mulugeta" },
+        { name: "Instagram", href: "https://instagram.com/son_caleb_7" },
     ];
 
     const services = [

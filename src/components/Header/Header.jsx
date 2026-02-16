@@ -160,7 +160,7 @@ export default function Header() {
                             <a href="https://github.com/Kaleb-07" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                                 <Github size={24} />
                             </a>
-                            <a href="https://www.linkedin.com/in/kaleb" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                            <a href="https://www.linkedin.com/in/kaleb-mulugeta" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                                 <Linkedin size={24} />
                             </a>
                         </div>

@@ -146,7 +146,7 @@ export default function Contact() {
 
                             {/* LinkedIn */}
                             <a
-                                href="https://www.linkedin.com/in/kaleb"
+                                href="https://www.linkedin.com/in/kaleb-mulugeta"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-4 p-4 rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50 hover:border-blue-600 transition shadow-sm hover:shadow-md"
@@ -159,7 +159,7 @@ export default function Contact() {
                                         LinkedIn
                                     </p>
                                     <p className="text-gray-900 dark:text-white font-medium">
-                                        kaleb
+                                        kaleb-mulugeta
                                     </p>
                                 </div>
                             </a>
