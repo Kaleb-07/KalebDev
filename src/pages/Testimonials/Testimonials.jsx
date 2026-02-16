@@ -1,34 +1,34 @@
 import { useEffect, useState } from "react";
 import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-import client1 from "../../assets/Client/ClientOne.png";
-import client2 from "../../assets/Client/ClientTwo.png";
-import client3 from "../../assets/Client/ClientThree.png";
+import client1 from "../../assets/Client/ClientOne.jpg";
+import client2 from "../../assets/Client/ClientTwo.jpg";
+import client3 from "../../assets/Client/ClientThree.jpg";
 
 const testimonials = [
     {
         id: 0,
         name: "Dagim Worku",
-        role: "CEO, Tech Innovations",
+        role: "Classmate & Friend",
         image: client1,
         message:
-            "Kaleb is a top-tier Software Engineer. He architected a scalable backend for our platform that improved performance by 40%. His technical depth and problem-solving skills are impressive.",
+            "A dedicated classmate and a great friend. Kaleb's problem-solving skills in our project work are outstanding. He is always eager to learn new things, and his active participation in class inspires everyone around him.",
     },
     {
         id: 1,
-        name: "Sarah Johnson",
-        role: "Product Manager, Creative Studios",
-        image: client2,
+        name: "Yibralem Kiros",
+        role: "Product Manager, Tech Innovations",
+        image: client3,
         message:
-            "We hired Kaleb for a complex mobile app, and he delivered a flawless React Native experience. He bridges the gap between clean code and intuitive UI/UX design perfectly.",
+            "Kaleb is family, but his work ethic is strictly professional. He joined my company and immediately became indispensable, helping with every project. His vast knowledge and ability to deliver are exceptional.",
     },
     {
         id: 2,
-        name: "Michael Chen",
-        role: "Founder, StartUp Hub",
-        image: client3,
+        name: "Mr. Abdiweli Jama",
+        role: "Teacher, Web/Mobile Development",
+        image: client2,
         message:
-            "His eye for design is unmatched. Kaleb redesigned our entire dashboard, making it not only visually stunning but also incredibly user-friendly. A true Full Stack Developer who cares about the user.",
+            "As his teacher, I've observed Kaleb's exceptional dedication. From class participation to project presentations, his coding skills and deep understanding of development concepts are truly impressive.",
     },
 ];
 
