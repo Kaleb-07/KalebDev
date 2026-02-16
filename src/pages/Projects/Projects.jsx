@@ -15,7 +15,7 @@ const projectsData = [
         title: "Amazon-Cloning",
         description: "Full-stack web application with user authentication and payment integration",
         img: EcommerceImg,
-        links: { demo: "https://amazon-cloning-carli.netlify.app/", github: "https://github.com/Kaleb-07/Amazon_clone.git" },
+        links: { demo: "https://amazon-clone-teal-one.vercel.app", github: "https://github.com/Kaleb-07/Amazon_clone.git" },
     },
     {
         id: 2,
