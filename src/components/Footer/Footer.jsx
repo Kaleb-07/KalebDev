@@ -75,6 +75,8 @@ export default function Footer() {
                                 <li key={res.name}>
                                     <a
                                         href={res.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="relative hover:text-purple-500 dark:hover:text-purple-400 transition-colors after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-purple-500 dark:after:bg-purple-400 after:w-0 hover:after:w-full after:transition-all after:duration-300"
                                     >
                                         {res.name}

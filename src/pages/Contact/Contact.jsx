@@ -164,21 +164,22 @@ export default function Contact() {
                                 </div>
                             </a>
 
-                            {/* Resume */}
+                            {/* Telegram */}
                             <a
-                                href={cvFile}
-                                download="KalebMulugetaCV.pdf"
-                                className="flex items-center gap-4 p-4 rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50 hover:border-green-600 transition shadow-sm hover:shadow-md group"
+                                href="https://t.me/Mesay7"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-4 p-4 rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50 hover:border-blue-500 transition shadow-sm hover:shadow-md group"
                             >
-                                <div className="w-12 h-12 bg-green-100 dark:bg-green-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                    <FileText className="text-green-600 dark:text-white" />
+                                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <Send className="text-blue-600 dark:text-white" />
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                                        Resume
+                                        Telegram
                                     </p>
                                     <p className="text-gray-900 dark:text-white font-medium">
-                                        Download CV
+                                        @Mesay7
                                     </p>
                                 </div>
                             </a>
