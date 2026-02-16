@@ -81,7 +81,7 @@ export default function Hero() {
 
                     {/* IMAGE */}
                     <div className="flex-1 flex justify-center">
-                        <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl animate-float">
+                        <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl animate-float max-w-full">
                             <img
                                 src={profileImg}
                                 alt="Kaleb"

@@ -78,22 +78,25 @@
 /* Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 366.66px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
     gap: 30px;
 }
 
-/* Tablet */
+/* Tablet & Mobile */
 @media (max-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 366.66px);
+    .projects-container {
+        padding: 0 40px;
     }
 }
 
-/* Mobile */
 @media (max-width: 640px) {
+    .projects-container {
+        padding: 0 20px;
+    }
+
     .projects-grid {
-        grid-template-columns: repeat(1, 366.66px);
+        grid-template-columns: 1fr;
     }
 }
 

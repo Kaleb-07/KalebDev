@@ -28,7 +28,7 @@ function About() {
                 <div className="flex flex-col md:flex-row items-center gap-12">
                     {/* Image */}
                     <div className="flex-1 flex justify-center">
-                        <div className="w-72 h-96 md:w-80 md:h-[500px] rounded-xl overflow-hidden shadow-lg">
+                        <div className="w-72 h-96 md:w-80 md:h-[500px] rounded-xl overflow-hidden shadow-lg max-w-full">
                             <img
                                 src={profileImg}
                                 alt="Kaleb"
@@ -55,7 +55,7 @@ function About() {
                         </p>
 
                         {/* Personal Info */}
-                        <div className="grid grid-cols-2 gap-4 text-gray-800 dark:text-gray-300 mb-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-800 dark:text-gray-300 mb-6">
                             <div className="flex gap-2">
                                 <span className="font-semibold text-purple-600 dark:text-purple-400">Name:</span>
                                 <p>Kaleb Mulugeta</p>
