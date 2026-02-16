@@ -1,5 +1,5 @@
 import { Mail, Github, Linkedin, Send, AlertCircle, FileText, MapPin } from "lucide-react";
-import cvFile from "../../assets/CV/Software_Developer_CV.pdf";
+import cvFile from "../../assets/CV/KalebMulugetaCV.pdf";
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -167,7 +167,7 @@ export default function Contact() {
                             {/* Resume */}
                             <a
                                 href={cvFile}
-                                download="Software_Developer_CV.pdf"
+                                download="KalebMulugetaCV.pdf"
                                 className="flex items-center gap-4 p-4 rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50 hover:border-green-600 transition shadow-sm hover:shadow-md group"
                             >
                                 <div className="w-12 h-12 bg-green-100 dark:bg-green-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
