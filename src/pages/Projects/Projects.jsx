@@ -31,7 +31,7 @@ const projectsData = [
         title: "Netflix-Cloning",
         description: "Mobile-first web application for Entertainment and watch movies",
         img: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&q=80",
-        links: { demo: "https://comforting-sunburst-0c3146.netlify.app/", github: "https://github.com/Kaleb-07/NetfilxClone.git" },
+        links: { demo: "https://netfilx-clone-xi.vercel.app", github: "https://github.com/Kaleb-07/NetfilxClone.git" },
     },
     {
         id: 8,
