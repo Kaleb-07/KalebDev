@@ -109,20 +109,6 @@ export default function Contact() {
                                 </div>
                             </a>
 
-                            {/* Location */}
-                            <div className="flex items-center gap-4 p-4 rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50 transition shadow-sm hover:shadow-md">
-                                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-600 rounded-2xl flex items-center justify-center">
-                                    <MapPin className="text-purple-600 dark:text-white" />
-                                </div>
-                                <div>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                                        Location
-                                    </p>
-                                    <p className="text-gray-900 dark:text-white font-medium">
-                                        Addis Ababa, ETH
-                                    </p>
-                                </div>
-                            </div>
 
                             {/* GitHub */}
                             <a

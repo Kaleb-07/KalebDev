@@ -27,7 +27,7 @@ export default function Footer() {
     ];
 
     const contact = [
-        { name: "Email: mesafint007@gmail.com", href: "mailto:mesafint007@gmail.com" },
+        { name: "Phone: +251 991 457 181", href: "tel:+2519914571181" },
         { name: "Location: Addis Ababa, ETH", href: "#" },
     ];
 
@@ -108,7 +108,7 @@ export default function Footer() {
 
                     {/* Contact */}
                     <div>
-                        <h4 className="font-bold mb-4">Contact</h4>
+                        <h4 className="font-bold mb-4">Address</h4>
                         <ul className="space-y-2 text-sm">
                             {contact.map((c) => (
                                 <li key={c.name}>
