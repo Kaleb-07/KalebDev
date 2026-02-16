@@ -4,7 +4,12 @@ import {
     FaGitAlt,
     FaDocker,
     FaAws,
-    FaVuejs
+    FaVuejs,
+    FaLightbulb,
+    FaUsers,
+    FaFileAlt,
+    FaTasks,
+    FaCodeBranch
 } from "react-icons/fa";
 import {
     SiNextdotjs,
@@ -58,6 +63,16 @@ export default function Skills() {
                 { name: "Netlify", icon: <SiNetlify className="text-teal-600" /> },
             ],
         },
+        {
+            category: "Soft Skills",
+            skills: [
+                { name: "Problem Solving", icon: <FaLightbulb className="text-yellow-500" /> },
+                { name: "Project Management", icon: <FaTasks className="text-indigo-500" /> },
+                { name: "Documentation", icon: <FaFileAlt className="text-blue-500" /> },
+                { name: "Team Collaboration", icon: <FaUsers className="text-green-500" /> },
+                { name: "Code Review", icon: <FaCodeBranch className="text-purple-500" /> },
+            ],
+        },
     ];
 
     return (
@@ -77,10 +92,11 @@ export default function Skills() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-                {skillCategories.map((cat) => (
+                {skillCategories.map((cat, index) => (
                     <div
                         key={cat.category}
-                        className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-md p-8 rounded-xl shadow-lg transition-transform hover:-translate-y-2"
+                        className={`bg-white/50 dark:bg-slate-800/50 backdrop-blur-md p-8 rounded-xl shadow-lg transition-transform hover:-translate-y-2 ${index === 3 ? 'md:col-start-2' : ''
+                            }`}
                     >
                         <h3 className="text-xl font-bold mb-6 text-purple-600 dark:text-purple-400 border-b border-purple-500/20 pb-2">
                             {cat.category}
