@@ -4,7 +4,6 @@ import {
     FaGitAlt,
     FaDocker,
     FaAws,
-    FaVuejs,
     FaLightbulb,
     FaUsers,
     FaFileAlt,
@@ -23,7 +22,8 @@ import {
     SiGithubactions,
     SiFigma,
     SiNetlify,
-    SiMysql
+    SiMysql,
+    SiJavascript
 } from "react-icons/si";
 import "../Projects/Projects.css";
 
@@ -36,8 +36,8 @@ export default function Skills() {
                 { name: "React Native", icon: <FaReact className="text-blue-400" /> },
                 { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white" /> },
                 { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
+                { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
                 { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
-                { name: "Vue.js", icon: <FaVuejs className="text-green-500" /> },
             ],
         },
         {

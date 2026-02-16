@@ -8,7 +8,7 @@ import client3 from "../../assets/Client/ClientThree.jpg";
 const testimonials = [
     {
         id: 0,
-        name: "Dagim Worku",
+        name: "Mr.Dagim Worku",
         role: "Classmate & Friend",
         image: client1,
         message:
@@ -16,7 +16,7 @@ const testimonials = [
     },
     {
         id: 1,
-        name: "Yibralem Kiros",
+        name: "Ms.Yibralem Kiros",
         role: "Product Manager, Tech Innovations",
         image: client3,
         message:
