@@ -27,7 +27,7 @@ export default function Footer() {
     ];
 
     const contact = [
-        { name: "Phone: +251 991 457 1181", href: "tel:+2519914571181" },
+        { name: "Phone: +251 91 457 1181", href: "tel:+251914571181" },
         { name: "Location: Addis Ababa, ETH", href: "#" },
     ];
 
