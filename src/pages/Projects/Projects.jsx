@@ -39,7 +39,7 @@ const projectsData = [
         title: "User Management System",
         description: "Full-stack CRUD application demonstrating Create, Read, Update, Delete operations for user data (name, address, company) with seamless frontend-backend API integration",
         img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-        links: { demo: "#", github: "https://github.com/Kaleb-07/User--Managment.git" },
+        links: { github: "https://github.com/Kaleb-07/User--Managment.git" },
     },
     {
         id: 4,
