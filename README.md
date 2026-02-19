@@ -15,7 +15,7 @@ It includes a fully functional **contact form powered by EmailJS** and supports 
 - 🖼️ Project hover overlay animations
 - ✉️ Contact form with EmailJS integration
 - 🔐 Environment variable configuration
-<!-- - 🚀 Ready for deployment (Netlify / Vercel) -->
+- 🚀 Ready for deployment (Netlify / Vercel)
 
 ---
 
@@ -26,7 +26,7 @@ It includes a fully functional **contact form powered by EmailJS** and supports 
 - **Icons:** React Icons, Lucide Icons
 - **Email Service:** EmailJS
 - **Build Tool:** Vite
-- **Deployment:** Netlify / Vercel
+- **Deployment:** Vercel
 
 ---
 
