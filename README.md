@@ -10,6 +10,13 @@ It includes a fully functional **contact form powered by EmailJS** and supports 
 - ⚛️ Built with React (Vite)
 - 🎨 Tailwind CSS & custom CSS
 - 🌙 Dark / Light mode support
+- **Animated Loader Screen**
+- **Floating "Hire Me" Button**
+- **Typing Animation**
+- **Project Filtering System** (Software / full-stack / Design)
+- **Skill Progress Bars**
+- **Testimonials Carousel**
+- **Responsive Contact Form**
 - 📱 Fully responsive design
 - 🗂️ Filterable projects section
 - 🖼️ Project hover overlay animations
