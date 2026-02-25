@@ -27,7 +27,6 @@ It includes a fully functional **contact form powered by EmailJS** and supports 
 - **Email Service:** EmailJS
 - **Build Tool:** Vite
 - **Deployment:** Vercel
-
 ---
 ## 📁 Project Structure
 
