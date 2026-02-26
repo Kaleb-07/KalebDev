@@ -2,7 +2,6 @@ import {
     FaReact,
     FaNodeJs,
     FaGitAlt,
-    FaDocker,
     FaAws,
     FaLightbulb,
     FaUsers,
