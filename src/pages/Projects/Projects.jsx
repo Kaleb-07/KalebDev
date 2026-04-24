@@ -79,7 +79,7 @@ const projectsData = [
         title: "FitLife Brand Identity",
         description: "Modern fitness brand identity with logo design, color palette, typography system, and marketing materials.",
         img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
-        links: { demo: "#" },
+        links: { demo: "https://stitch.withgoogle.com/preview/13222661821150093903?node-id=0b823b01049e4a7a8a1ec8d83b042398" },
     },
     {
         id: 6,
@@ -87,7 +87,7 @@ const projectsData = [
         title: "SecureBank Mobile App",
         description: "Mobile banking app UI/UX redesign focusing on accessibility, intuitive navigation, and modern aesthetics.",
         img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
-        links: { demo: "#" },
+        links: { demo: "https://stitch.withgoogle.com/preview/7184014738454407163?node-id=33d6c36aa7f34c73ba94ed12a2a53560" },
     },
 ];
 
