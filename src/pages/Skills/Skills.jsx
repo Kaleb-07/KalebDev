@@ -2,7 +2,6 @@ import {
     FaReact,
     FaNodeJs,
     FaGitAlt,
-    FaDocker,
     FaAws,
     FaLightbulb,
     FaUsers,
@@ -64,7 +63,7 @@ export default function Skills() {
             category: "Tools, DevOps & Design",
             skills: [
                 { name: "Git", icon: <FaGitAlt className="text-orange-600" /> },
-                { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
+                
                 { name: "Figma", icon: <SiFigma className="text-purple-500" /> },
                 { name: "AWS", icon: <FaAws className="text-orange-400" /> },
                 { name: "CI/CD", icon: <SiGithubactions className="text-gray-800 dark:text-white" /> },
