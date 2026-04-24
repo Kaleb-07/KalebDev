@@ -8,7 +8,8 @@ import {
     FaUsers,
     FaFileAlt,
     FaTasks,
-    FaCodeBranch
+    FaCodeBranch,
+    FaTools
 } from "react-icons/fa";
 import {
     SiNextdotjs,
@@ -23,7 +24,12 @@ import {
     SiFigma,
     SiNetlify,
     SiMysql,
-    SiJavascript
+    SiJavascript,
+    SiLaravel,
+    SiRailway,
+    SiRender,
+    SiPostman,
+    SiSwagger
 } from "react-icons/si";
 import "../Projects/Projects.css";
 
@@ -45,10 +51,13 @@ export default function Skills() {
             skills: [
                 { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
                 { name: "Express", icon: <SiExpress className="text-gray-600 dark:text-gray-400" /> },
+                { name: "Laravel", icon: <SiLaravel className="text-red-600" /> },
                 { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
                 { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
                 { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
                 { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
+                { name: "Swagger", icon: <SiSwagger className="text-green-500" /> },
+                { name: "Requestly", icon: <FaTools className="text-blue-500" /> },
             ],
         },
         {
@@ -61,6 +70,10 @@ export default function Skills() {
                 { name: "CI/CD", icon: <SiGithubactions className="text-gray-800 dark:text-white" /> },
                 { name: "Vercel", icon: <SiVercel className="text-black dark:text-white" /> },
                 { name: "Netlify", icon: <SiNetlify className="text-teal-600" /> },
+                { name: "Railway", icon: <SiRailway className="text-black dark:text-white" /> },
+                { name: "Render", icon: <SiRender className="text-black dark:text-white" /> },
+                { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+
             ],
         },
         {

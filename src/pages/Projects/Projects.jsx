@@ -10,6 +10,22 @@ import BrandIdentityImg from "../../assets/MyProject/BrandIdentity.png";
 
 const projectsData = [
     {
+        id: 9,
+        category: "Deployed",
+        title: "LuFi Shop",
+        description: "A full-stack e-commerce ecosystem built with React and Laravel, featuring advanced localization for the Ethiopian market (Amharic/Oromo support), interactive data dashboards, and a premium UI/UX.",
+        img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+        links: { demo: "https://lufi-shop.vercel.app/", github: "https://github.com/Kaleb-07/LuFi_Shop.git" },
+    },
+    {
+        id: 10,
+        category: "Deployed",
+        title: "Cinema Circle",
+        description: "A premium, full-stack PERN web application for cinematic discovery and content management, featuring a state-of-the-art 'Luxury Elite' administrative dashboard.",
+        img: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=800&q=80",
+        links: { github: "https://github.com/Kaleb-07/PERN_Full_Stack.git" },
+    },
+    {
         id: 1,
         category: "Deployed",
         title: "Amazon-Cloning",
